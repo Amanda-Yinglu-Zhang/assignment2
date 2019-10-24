@@ -6,12 +6,12 @@ import firebase from './firebase';
 const todos = [
   {
   
-    title: 'Igore me',
-  },
-  {
+//     title: 'Igore me',
+//   },
+//   {
 
-    title: 'I am not working',
-  },
+//     title: 'I am not working',
+//   },
 
 ];
 
