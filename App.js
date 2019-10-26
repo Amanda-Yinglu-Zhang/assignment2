@@ -4,14 +4,14 @@ import Constants from 'expo-constants';
 import firebase from './firebase';
 
 const todos = [
-  {
+ // {
   
-//     title: 'Igore me',
-//   },
-//   {
+  //   title: 'Igore me',
+  // },
+  // {
 
-//     title: 'I am not working',
-//   },
+  //   title: 'I am not working',
+  // },
 
 ];
 
@@ -33,12 +33,12 @@ export default class App extends Component {
      const todosJSON = todos.val();
     this.setState({todos: todosJSON === null ? {} : todosJSON }) ;
    })
-   this.todosDatabase.push({ title:'do your homework'})
+   this.todosDatabase.push({ title:'clean your room'})
   }
   //create
   create(){
   this.todosDatabase
-  .push({title:'do your homework'})
+  .push({title:'clean your room'})
 }
 delete(){
   if(this.state.selectedId === 'hello world'){
@@ -53,6 +53,7 @@ delete(){
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+     
       <Button title="Create" onPress={()=>this.create()}></Button>
        <Button title="Delete" onPress={()=>this.delete()}></Button>
        {
@@ -87,6 +88,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: Constants.statusBarHeight,
+    backgroundColor: 'purple',
   },
   item: {
     backgroundColor: '#f9c2ff',
